@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(location.search);
   const id = Number(params.get("postId"));
 
+  // retreive local storage
   const posts = JSON.parse(localStorage.getItem("posts") || "[]");
 
   const post = posts[id];
@@ -9,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const editButton = document.getElementById("edit");
   const deleteButton = document.getElementById("delete");
 
+  // create function to show post
   function showPost() {
     if (!post) {
       postDiv.textContent = "post was not found";
@@ -22,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ${post.image}
     `;
   }
-
+  //create event listener for edit button
   editButton.addEventListener("click", () => {
     postDiv.innerHTML = `
     <input id="editTitle" value="${post.title}">
@@ -37,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const newContent = document.getElementById("editContent").value.trim();
       const titleError = document.getElementById("titleError");
       const contentError = document.getElementById("contentError");
+      // if statement check to make sure user input title and content
       if (!newTitle) {
         titleError.textContent = "please enter a title";
       } else {
@@ -50,9 +53,11 @@ document.addEventListener("DOMContentLoaded", () => {
       posts[id].title = newTitle;
       posts[id].content = newContent;
       localStorage.setItem("posts", JSON.stringify(posts));
+      // call the function
       showPost();
     });
   });
+  // event listener for delete button
   deleteButton.addEventListener("click", () => {
     posts.splice(id, 1);
     localStorage.setItem("posts", JSON.stringify(posts));

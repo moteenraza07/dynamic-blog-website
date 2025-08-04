@@ -1,14 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("postForm");
+  // event listener for form submission
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
+    // create variables for title, content, image, and error messages
     const title = document.getElementById("title");
     const content = document.getElementById("content");
     const image = document.getElementById("image");
     const titleError = document.getElementById("titleError");
     const contentError = document.getElementById("contentError");
-
+    // if statement to make sure user input title and content
     if (!title.value.trim()) {
       titleError.textContent = "Please enter a title";
     } else {
