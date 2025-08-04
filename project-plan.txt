@@ -1,0 +1,19 @@
+Project Plan: 
+- Build a simple blog website with three main pages
+1. home page to list all blog posts
+2. new post page to create a post
+3. post details page to edit and delete individual posts
+
+
+I will be using 
+HTML
+CSS 
+JavaScript
+local Storage
+
+
+End Goal: 
+
+All three pages will correctly
+posts are stored and retreived correctly
+clean ui and working navigation
