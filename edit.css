@@ -1,0 +1,54 @@
+body {
+  background-color: lightcoral;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+div {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+#titleError,
+#contentError {
+  color: red;
+}
+
+#post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 2px solid;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+  margin: 20px;
+}
+
+button {
+  background-color: #4caf50;
+  font-weight: 700;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+}
+.centerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#saveButton {
+  margin: 20px;
+}
