@@ -3,7 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog Post</title>
+    <title>Blog Post Main Page</title>
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="navContainer">
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="new-post.html">Create Post</a>
+          <a href="post.html">Edit Post</a>
+        </nav>
+      </div>
+      <h1>My Blog</h1>
+    </header>
+    <main class="mainContainer">
+      <h2>Recent Posts</h2>
+      <div id="postList">
+        <!--Posts will go here-->
+      </div>
+    </main>
+  </body>
 </html>
