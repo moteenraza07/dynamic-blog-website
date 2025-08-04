@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   //create event listener for edit button
   editButton.addEventListener("click", () => {
+    const post = posts[id];
+    if (!post) return;
     postDiv.innerHTML = `
     <input id="editTitle" value="${post.title}">
     <div id="titleError"></div>
@@ -40,6 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const titleError = document.getElementById("titleError");
       const contentError = document.getElementById("contentError");
       // if statement check to make sure user input title and content
+      titleError.textContent = "";
+      contentError.textContent = "";
       if (!newTitle) {
         titleError.textContent = "please enter a title";
       } else {
@@ -62,4 +66,5 @@ document.addEventListener("DOMContentLoaded", () => {
     posts.splice(id, 1);
     localStorage.setItem("posts", JSON.stringify(posts));
   });
+  showPost();
 });

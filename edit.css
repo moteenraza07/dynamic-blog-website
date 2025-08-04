@@ -2,6 +2,18 @@ body {
   background-color: lightcoral;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin: 15px;
+}
+a {
+  margin: 10px;
+  text-decoration: none;
+  color: #f5f5f7;
+  font-weight: 700;
+}
 
 div {
   font-size: 30px;

@@ -1,6 +1,18 @@
 body {
   background-color: antiquewhite;
 }
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin: 15px;
+}
+a {
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
 
 #titleError,
 #contentError {
