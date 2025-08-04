@@ -7,11 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const post = posts[id];
   const postDiv = document.getElementById("post");
   const editButton = document.getElementById("edit");
+  const deleteButton = document.getElementById("delete");
 
   function showPost() {
     if (!post) {
       postDiv.textContent = "post was not found";
       editButton.style.display = "none";
+      deleteButton.style.display = "none";
       return;
     }
     postDiv.innerHTML = `
@@ -50,5 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("posts", JSON.stringify(posts));
       showPost();
     });
+  });
+  deleteButton.addEventListener("click", () => {
+    posts.splice(id, 1);
+    localStorage.setItem("posts", JSON.stringify(posts));
   });
 });
